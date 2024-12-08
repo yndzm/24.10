@@ -24,6 +24,9 @@ git clone https://$github/sbwml/luci-app-webdav package/new/luci-app-webdav
 # luci-app-lucky
 git clone https://$github/gdy666/luci-app-lucky package/new/luci-app-lucky
 
+# luci-app-adguardhome
+git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
+
 # ddns - fix boot
 sed -i '/boot()/,+2d' feeds/packages/net/ddns-scripts/files/etc/init.d/ddns
 
@@ -138,7 +141,7 @@ git clone https://github.com/sbwml/luci-app-mentohust package/new/mentohust
 
 # custom packages
 rm -rf feeds/packages/utils/coremark
-git clone https://$github/sbwml/openwrt_pkgs package/new/custom --depth=1
+git clone https://$github/yndzm/openwrt_pkgs package/new/custom --depth=1
 # coremark - prebuilt with gcc15
 if [ "$platform" = "rk3568" ]; then
     curl -s $mirror/openwrt/patch/coremark/coremark.aarch64-4-threads > package/new/custom/coremark/src/musl/coremark.aarch64
