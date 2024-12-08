@@ -22,7 +22,7 @@ git clone https://$github/sbwml/luci-app-filemanager package/new/luci-app-filema
 git clone https://$github/sbwml/luci-app-webdav package/new/luci-app-webdav
 
 # luci-app-lucky
-git clone https://$github/gdy666/luci-app-lucky package/new/luci-app-lucky
+git clone https://$github/sirpdboy/luci-app-lucky package/new/luci-app-lucky
 
 # ddns - fix boot
 sed -i '/boot()/,+2d' feeds/packages/net/ddns-scripts/files/etc/init.d/ddns
