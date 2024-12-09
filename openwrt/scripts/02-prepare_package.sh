@@ -21,8 +21,8 @@ git clone https://$github/sbwml/luci-app-filemanager package/new/luci-app-filema
 # luci-app-webdav
 git clone https://$github/sbwml/luci-app-webdav package/new/luci-app-webdav
 
-# luci-app-lucky
-git clone https://$github/gdy666/luci-app-lucky package/new/luci-app-lucky
+# lucky
+git clone https://$github/gdy666/lucky package/new/lucky
 
 # luci-app-adguardhome
 git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
