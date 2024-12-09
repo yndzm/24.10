@@ -26,7 +26,7 @@ git clone https://$github/sbwml/luci-app-webdav package/new/luci-app-webdav
 git clone  https://github.com/gdy666/luci-app-lucky package/new/lucky
 
 # luci-app-adguardhome
-git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
+git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/adguardhome
 
 # ddns - fix boot
 sed -i '/boot()/,+2d' feeds/packages/net/ddns-scripts/files/etc/init.d/ddns
