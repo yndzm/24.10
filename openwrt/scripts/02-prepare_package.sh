@@ -22,7 +22,7 @@ git clone https://$github/sbwml/luci-app-filemanager package/new/luci-app-filema
 git clone https://$github/sbwml/luci-app-webdav package/new/luci-app-webdav
 
 # lucky
-git clone https://$github/yndzm/luci-app-lucky package/new/lucky
+git clone https://$github/gdy666/luci-app-lucky package/new/lucky
 
 # luci-app-adguardhome
 git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
