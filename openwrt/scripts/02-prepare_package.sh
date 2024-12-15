@@ -28,8 +28,7 @@ git clone https://$github/yndzm/luci-app-lucky package/new/lucky
 git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
 
 #Linkease
-git clone https://$github/linkease/nas-packages package/new/nas-packages
-git clone https://$github/linkease/nas-packages-luci package/new/nas-packages-luci
+git clone --depth=1 -b main https://github.com/linkease/nas-packages-luci package/nas-packages-luci
 
 # ddns - fix boot
 sed -i '/boot()/,+2d' feeds/packages/net/ddns-scripts/files/etc/init.d/ddns
