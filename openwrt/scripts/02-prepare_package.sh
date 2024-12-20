@@ -18,7 +18,7 @@ function git_sparse_clone() {
 rm -rf feeds/packages/lang/node
 git clone https://$github/sbwml/feeds_packages_lang_node-prebuilt feeds/packages/lang/node -b packages-24.10
 
-# Adguardhome&quickstart
+# quickstart
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages quickstart luci-app-quickstart
 
 # iStore
