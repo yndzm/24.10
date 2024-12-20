@@ -19,11 +19,11 @@ rm -rf feeds/packages/lang/node
 git clone https://$github/sbwml/feeds_packages_lang_node-prebuilt feeds/packages/lang/node -b packages-24.10
 
 # Adguardhome&quickstart
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-app-adguardhome quickstart luci-app-quickstart
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages quickstart luci-app-quickstart
 
 # iStore
-git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
-git_sparse_clone main https://github.com/linkease/istore luci
+# git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+# git_sparse_clone main https://github.com/linkease/istore luci
 
 # default settings
 git clone https://$github/sbwml/default-settings package/new/default-settings -b openwrt-24.10
@@ -42,7 +42,7 @@ git clone https://$github/sbwml/luci-app-webdav package/new/luci-app-webdav
 git clone https://$github/yndzm/luci-app-lucky package/new/lucky
 
 # luci-app-adguardhome
-# git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
+git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
 
 # ddns - fix boot
 sed -i '/boot()/,+2d' feeds/packages/net/ddns-scripts/files/etc/init.d/ddns
