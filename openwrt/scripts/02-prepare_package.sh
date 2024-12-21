@@ -14,13 +14,13 @@ function git_sparse_clone() {
 }
 
 # quickstart 
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-lib-taskd luci-lib-xterm taskd quickstart luci-app-quickstart luci-app-store
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-app-adguardhome luci-lib-taskd luci-lib-xterm taskd quickstart luci-app-quickstart luci-app-store
 
 # lucky
 git clone https://$github/yndzm/luci-app-lucky package/new/lucky
 
 # luci-app-adguardhome
-git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
+###git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
 
 # golang 1.23
 rm -rf feeds/packages/lang/golang
