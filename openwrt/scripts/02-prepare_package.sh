@@ -1,9 +1,5 @@
 #!/bin/bash -e
 
-# golang 1.23
-rm -rf feeds/packages/lang/golang
-git clone https://$github/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
-
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
@@ -14,16 +10,26 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
+# quickstart 
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages quickstart luci-app-quickstart luci-app-store
+
+# iStore
+###git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+###git_sparse_clone main https://github.com/linkease/istore luci
+
+# lucky
+git clone https://$github/yndzm/luci-app-lucky package/new/lucky
+
+# luci-app-adguardhome
+git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
+
+# golang 1.23
+rm -rf feeds/packages/lang/golang
+git clone https://$github/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+
 # node - prebuilt
 rm -rf feeds/packages/lang/node
 git clone https://$github/sbwml/feeds_packages_lang_node-prebuilt feeds/packages/lang/node -b packages-24.10
-
-# quickstart 
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages quickstart luci-app-quickstart
-
-# iStore
-git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
-git_sparse_clone main https://github.com/linkease/istore luci
 
 # default settings
 git clone https://$github/sbwml/default-settings package/new/default-settings -b openwrt-24.10
@@ -37,12 +43,6 @@ git clone https://$github/sbwml/luci-app-filemanager package/new/luci-app-filema
 
 # luci-app-webdav
 git clone https://$github/sbwml/luci-app-webdav package/new/luci-app-webdav
-
-# lucky
-git clone https://$github/yndzm/luci-app-lucky package/new/lucky
-
-# luci-app-adguardhome
-git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
 
 # ddns - fix boot
 sed -i '/boot()/,+2d' feeds/packages/net/ddns-scripts/files/etc/init.d/ddns
@@ -158,7 +158,7 @@ git clone https://github.com/sbwml/luci-app-mentohust package/new/mentohust
 
 # custom packages
 rm -rf feeds/packages/utils/coremark
-git clone https://$github/yndzm/openwrt_pkgs package/new/custom --depth=1
+git clone https://$github/sbwml/openwrt_pkgs package/new/custom --depth=1
 # coremark - prebuilt with gcc15
 if [ "$platform" = "rk3568" ]; then
     curl -s $mirror/openwrt/patch/coremark/coremark.aarch64-4-threads > package/new/custom/coremark/src/musl/coremark.aarch64
