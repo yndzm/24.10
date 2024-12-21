@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# 移除要替换的包
+rm -rf feeds/packages/net/{adguardhome}
+
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
@@ -11,7 +14,7 @@ function git_sparse_clone() {
 }
 
 # quickstart 
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages quickstart luci-app-quickstart luci-app-store
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome quickstart luci-app-quickstart luci-app-store
 
 # iStore
 ###git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
