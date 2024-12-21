@@ -16,10 +16,6 @@ function git_sparse_clone() {
 # quickstart 
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome quickstart luci-app-quickstart luci-app-store
 
-# iStore
-# git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
-# git_sparse_clone main https://github.com/linkease/istore luci
-
 # lucky
 git clone https://$github/yndzm/luci-app-lucky package/new/lucky
 
