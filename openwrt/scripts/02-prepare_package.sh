@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # 移除要替换的包
-rm -rf feeds/packages/net/{adguardhome}
+rm -rf feeds/packages/net/adguardhome
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
