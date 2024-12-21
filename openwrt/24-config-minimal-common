@@ -229,3 +229,4 @@ CONFIG_ZLIB_OPTIMIZE_SPEED=y
 CONFIG_PACKAGE_quickstart=y
 CONFIG_PACKAGE_adguardhome=y
 CONFIG_PACKAGE_luci-app-store
+CONFIG_PACKAGE_luci-i18n-store-zh-cn=y
