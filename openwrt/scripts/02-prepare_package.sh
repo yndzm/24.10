@@ -14,7 +14,7 @@ function git_sparse_clone() {
 }
 
 # quickstart 
-git_sparse_clone master https://github.com/yndzm/openwrt-packages luci-app-adguardhome adguardhome luci-lib-taskd luci-lib-xterm taskd quickstart luci-app-quickstart
+git_sparse_clone master https://github.com/yndzm/openwrt-X luci-app-adguardhome adguardhome luci-lib-taskd luci-lib-xterm taskd quickstart luci-app-quickstart
 
 # lucky
 git clone https://$github/yndzm/luci-app-lucky package/new/lucky
