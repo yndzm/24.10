@@ -1,5 +1,27 @@
 #!/bin/bash -e
 
+# 移除要替换的包
+rm -rf feeds/packages/net/adguardhome
+
+# Git稀疏克隆，只克隆指定目录到本地
+function git_sparse_clone() {
+  branch="$1" repourl="$2" && shift 2
+  git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
+  repodir=$(echo $repourl | awk -F '/' '{print $(NF)}')
+  cd $repodir && git sparse-checkout set $@
+  mv -f $@ ../package
+  cd .. && rm -rf $repodir
+}
+
+# quickstart 
+git_sparse_clone master https://github.com/yndzm/openwrt-X luci-app-adguardhome adguardhome luci-lib-xterm luci-lib-taskd taskd quickstart luci-app-quickstart
+
+# lucky
+git clone https://$github/yndzm/luci-app-lucky package/new/lucky
+
+# luci-app-adguardhome
+###git clone https://$github/chenmozhijin/luci-app-adguardhome package/new/luci-app-adguardhome
+
 # golang 1.23
 rm -rf feeds/packages/lang/golang
 git clone https://$github/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
