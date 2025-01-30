@@ -810,4 +810,3 @@ index 0000000..a4060d9
 ++const struct host_hooks host_hooks = HOST_HOOKS_INITIALIZER;
 -- 
 2.43.5
-
